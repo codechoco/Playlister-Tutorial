@@ -1,0 +1,30 @@
+<!-- templates/playlists_new.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/playlists'>
+    <fieldset>
+    <legend>New Playlist</legend>
+    <!-- TITLE -->
+    <p>
+        <label for='title'>Title</label><br>
+        <input type='text' name='title' />
+    </p>
+    <p>
+        <label for='description'>Description</label><br>
+        <input type='text' name='description' />
+    </p>
+    <!-- VIDEO IDS --> 
+        <p > 
+            <label  for = 'playlist-video-ids'> Vidéos </label >< br > 
+            <p > Ajoutez l'ID des vidéos que vous souhaitez inclure dans votre playlist. Séparez par une nouvelle ligne. </ p > 
+            <textarea  id = 'playlist-video-ids'  name = 'video_ids'  rows = '10' ></textarea > 
+        </p > 
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Playlist</button>
+    </p>
+</form>
+{% endblock %}
